@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+   <head>
+      <title> Attendance System </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style type="text/css">
+      	body
+      	{
+      		background-color: brown;
+      	}
+      	#head
+      	{
+      		text-align: center;
+      		color: yellow;
+      		font-size: 30px;
+      		border: 3px solid black;
+      		border-radius: 15px;
+      		margin-top: 10px;
+      	}
+      	#main 
+    	{
+      		border: 3px solid black;
+      		border-radius: 10px;
+      		padding-left: 10px;
+      		margin-top: 5px;
+      		margin-bottom: 5px;
+   	} 
+   	h2
+   	{
+   		color: yellow;
+   		margin-left: 20px;
+   	}  
+	#button
+	{
+		color: white;
+		background-color: black;
+		font-size: 20px;
+		border-radius: 7px;
+      		padding-left: 8px;
+      		margin-top: 8px;
+      		margin-bottom: 8px;
+	}
+	label
+	{
+		color: white;
+		font-size: 20px;
+	}
+      </style>
+   </head>
+   <body>
+   		<div id="head">
+		<p> Attendance System </p>
+		</div>
+		<div id="main">
+		<br>    <center>
+			<form method="post" action="showrecord">
+         <label for="studentid">Student id :</label>
+              <input type="text" name="studentid" id="studentid">
+         <br> 
+         <br>
+         <input type="submit" value="Show record" id="button">
+         </form>
+         
+         <p style="color: cyan;"><b> {{ idnumber }} </b></p>
+
+  <table style="color: cyan;">
+   <tr>
+      <th>id</th>
+      <th>time</th>
+   </tr>
+   {% for n in records %}
+   <tr>
+      <td>{{ n[0] }}</td>
+      <td>{{ n[1] }}</td>
+   </tr>
+   {% endfor %}
+  </table>
+
+			</center>
+		<br>
+		</div>
+   </body>
+</html>
