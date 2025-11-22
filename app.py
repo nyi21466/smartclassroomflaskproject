@@ -78,5 +78,5 @@ def showrecord():
            return render_template('show.html')
 
 if __name__ == "__main__":
-    app.run(host='172.20.10.4', port=8050)
-    #app.run(host="0.0.0.0", port=5001, debug=True)
+    #app.run(host='172.20.10.4', port=8050)
+    app.run(host="0.0.0.0", port=5001, debug=True)
